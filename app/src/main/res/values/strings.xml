@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GroceryList</string>
+    <string name="button_add_item">Add Item</string>
+    <string name="edit_item">Add item</string>
+    <string name="date_expiration">Expiration Date</string>
+    <string name="item_name">Item name</string>
+</resources>
