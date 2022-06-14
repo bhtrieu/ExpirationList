@@ -36,6 +36,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /*
+    Adds the data to the locale storage in the Android device
+     */
     public boolean addData(String itemName, String expirationDate){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -50,6 +53,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /*
+    Retrieves all the data from the locale storage
+     */
     public Cursor getExpirationList(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);

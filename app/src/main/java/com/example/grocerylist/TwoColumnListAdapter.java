@@ -25,12 +25,13 @@ public class TwoColumnListAdapter extends ArrayAdapter<Item> {
         mViewResourceId = textViewResourceId;
     }
 
+    /*
+    Create the multiple column listview
+     */
     public View getView(int position, View convertView, ViewGroup parent){
         convertView = mInflater.inflate(mViewResourceId, null);
 
         Item item = items.get(position);
-
-        System.out.println(item != null);
 
         if (item != null){
             TextView itemName = (TextView) convertView.findViewById(R.id.textItemName);

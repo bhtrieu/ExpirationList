@@ -29,7 +29,6 @@ public class AddItemActivity extends AppCompatActivity {
         //set the minimum date to today's date
         date.setMinDate(calendar.getTimeInMillis());
 
-
         //program the calendar to select new date when the user touches a new date
         date.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -42,10 +41,13 @@ public class AddItemActivity extends AppCompatActivity {
 
     }
 
+    /*
+
+     */
     public void addItem(View view){
         Intent intent = new Intent(this, MainActivity.class);
 
-        //Item name
+        //Retrieve item name and expiration date and sends it back to MainActivity
         EditText itemName = (EditText) findViewById(R.id.editTextItemName);
         System.out.println(itemName.getText().toString());
         intent.putExtra("itemName", itemName.getText().toString());
