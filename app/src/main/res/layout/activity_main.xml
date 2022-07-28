@@ -2,34 +2,69 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonHighlight"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4642b3"
     tools:context=".MainActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAddItem"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="72dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="#34eb86"
         android:onClick="addItem"
         android:text="@string/button_add_item"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ListView
         android:id="@+id/listViewGroceryList"
-        android:layout_width="322dp"
-        android:layout_height="0dp"
+        android:layout_width="320dp"
+        android:layout_height="500dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/buttonAddItem"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72"></ListView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSort"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="#34eb86"
+        android:onClick="sortList"
+        android:text="@string/button_sort"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSortTitle"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/calendar"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Date Added"
+        android:textAlignment="center"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewGroceryList"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

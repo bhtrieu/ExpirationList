@@ -4,41 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4642b3"
     tools:context=".AddItemActivity">
 
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="338dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/calendar"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="#34eb86"
         android:onClick="addItem"
         android:text="@string/button_add_item"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextItemName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/button_add_item"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/calendarView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

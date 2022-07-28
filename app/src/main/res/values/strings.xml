@@ -4,4 +4,10 @@
     <string name="edit_item">Add item</string>
     <string name="date_expiration">Expiration Date</string>
     <string name="item_name">Item name</string>
+    <string name="channel_name">Channel name</string>
+    <string name="channel_description">Channel description</string>
+    <string name="button_sort">Sort</string>
+    <string name="button_highlight">Highlight</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="date_added">Date Added</string>
 </resources>

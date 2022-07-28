@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 public class TwoColumnListAdapter extends ArrayAdapter<Item> {
@@ -40,7 +37,7 @@ public class TwoColumnListAdapter extends ArrayAdapter<Item> {
                 itemName.setText(item.getItemName());
             }
             if (date != null) {
-                date.setText(item.returnDate());
+                date.setText(item.returnDateExpired());
             }
         }
 

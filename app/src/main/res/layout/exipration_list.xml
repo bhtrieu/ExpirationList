@@ -10,17 +10,21 @@
 
         <TextView
             android:id="@+id/textItemName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="@string/item_name" />
+            android:text="@string/item_name"
+            android:textAlignment="center"
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/textDate"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="@string/date_expiration" />
+            android:text="@string/date_expiration"
+            android:textAlignment="textStart"
+            android:textSize="24dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

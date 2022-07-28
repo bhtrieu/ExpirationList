@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4642b3"
+    tools:context=".DeleteItemActivity">
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/calendar"
+        android:text="@string/item_name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDateAdded"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/calendar"
+        android:text="@string/date_added"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemName" />
+
+    <TextView
+        android:id="@+id/tvDateExpired"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/calendar"
+        android:text="@string/expiry_date"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateAdded" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="#f01616"
+        android:onClick="delete"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateExpired" />
+</androidx.constraintlayout.widget.ConstraintLayout>

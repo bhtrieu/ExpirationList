@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -47,18 +48,23 @@ public class AddItemActivity extends AppCompatActivity {
     public void addItem(View view){
         Intent intent = new Intent(this, MainActivity.class);
 
-        //Retrieve item name and expiration date and sends it back to MainActivity
+        //Retrieve the item name, the expiration date, and the date added and send it back to MainActivity
         EditText itemName = (EditText) findViewById(R.id.editTextItemName);
-        System.out.println(itemName.getText().toString());
-        intent.putExtra("itemName", itemName.getText().toString());
+        if (itemName.getText().toString().trim().length() > 0){
+            intent.putExtra("itemName", itemName.getText().toString());
 
-        CalendarView date = (CalendarView) findViewById(R.id.calendarView);
-        DateFormat formatter = new SimpleDateFormat("MMMM d, yyyy");
-        System.out.println(formatter.format(date.getDate()));
-        intent.putExtra("date", String.valueOf(date.getDate()));
+            CalendarView date = (CalendarView) findViewById(R.id.calendarView);
+            intent.putExtra("dateExpired", String.valueOf(date.getDate()));
 
-        setResult(RESULT_OK, intent);
-        finish();
+            Calendar calendar = Calendar.getInstance();
+            intent.putExtra("dateAdded", String.valueOf(calendar.getTimeInMillis()));
+
+            setResult(RESULT_OK, intent);
+            finish();
+        } else {
+            Toast.makeText(AddItemActivity.this, "Please enter a name for your item.", Toast.LENGTH_LONG).show();
+        }
+
     }
 
 
